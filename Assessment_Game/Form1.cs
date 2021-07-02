@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +17,7 @@ namespace Assessment_Game
         Dragon dragon = new Dragon(); //create an instance of the Spaceship Class called spaceship
         bool turnLeft, turnRight;
         //declare a list  missiles from the Missile class
-        List<Missile> missiles = new List<Missile>();
+        List<Fire> fires = new List<Fire>();
 
         public Form1()
         {
@@ -59,7 +58,7 @@ namespace Assessment_Game
         {
             if (e.Button == MouseButtons.Left)
             {
-                missiles.Add(new Missile(dragon.dragonRec, dragon.rotationAngle));
+                fires.Add(new Fire(dragon.dragonRec, dragon.rotationAngle));
             }
         }
 
@@ -76,10 +75,10 @@ namespace Assessment_Game
             //Draw the spaceship
             dragon.drawDragon(g);
 
-            foreach (Missile m in missiles)
+            foreach (Fire m in fires)
             {
-                m.drawMissile(g);
-                m.moveMissile(g);
+                m.drawFire(g);
+                m.moveFire(g);
             }
         }
     }
