@@ -23,8 +23,8 @@ namespace Assessment_Game
 
         public Fire(Rectangle spaceRec, int fireRotate)
         {
-            width = 35;
-            height = 30;
+            width = 40;
+            height = 35;
             fire = Properties.Resources.fire;
             fireRec = new Rectangle(x, y, width, height);
             //this code works out the speed of the missile to be used in the moveMissile method

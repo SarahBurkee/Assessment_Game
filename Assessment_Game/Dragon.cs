@@ -26,8 +26,8 @@ namespace Assessment_Game
         {
             x = 10;
             y = 360;
-            width = 50;
-            height = 50;
+            width = 60;
+            height = 60;
             rotationAngle = 0;
             dragon = Properties.Resources.dragon;
             dragonRec = new Rectangle(x, y, width, height);
