@@ -131,7 +131,8 @@ namespace Assessment_Game
                     marshmallow[i].y = 30;
                 }
             }
-            Invalidate();//makes the paint event fire to redraw the panel
+
+            PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
 
         private void MnuStart_Click(object sender, EventArgs e)
