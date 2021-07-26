@@ -21,7 +21,7 @@ namespace Assessment_Game
         public Rectangle dragonRec;//variable for a rectangle to place our image in
 
         //Create a constructor (initialises the values of the fields)
-        
+
         public Dragon()
         {
             x = 10;
@@ -48,15 +48,44 @@ namespace Assessment_Game
             g.DrawImage(dragon, dragonRec);
         }
 
-        public void moveDragon(int mouseX, int mouseY)
+        public void moveDragon(string move)
         {
-            dragonRec.X = mouseX;
-            dragonRec.Y = mouseY;
-            dragonRec.X = mouseX - (dragonRec.Width / 2);
-            dragonRec.Y = mouseY - (dragonRec.Height / 2);
+            dragonRec.Location = new Point(x, y);
+
+            if (move == "right")
+            {
+                if (dragonRec.Location.X > 450) // is spaceship within 50 of right side
+                {
+
+                    x = 450;
+                    dragonRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x += 5;
+                    dragonRec.Location = new Point(x, y);
+                }
+
+            }
+
+            if (move == "left")
+            {
+                if (dragonRec.Location.X < 10) // is spaceship within 10 of left side
+                {
+
+                    x = 10;
+                    dragonRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x -= 5;
+                    dragonRec.Location = new Point(x, y);
+                }
+
+            }
         }
-    }
+     }
 
-
+    
 
 }
