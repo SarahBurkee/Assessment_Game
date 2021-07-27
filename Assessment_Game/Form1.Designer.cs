@@ -61,7 +61,7 @@ namespace Assessment_Game
             this.MnuStop});
             this.MnuStrip.Location = new System.Drawing.Point(0, 0);
             this.MnuStrip.Name = "MnuStrip";
-            this.MnuStrip.Size = new System.Drawing.Size(684, 24);
+            this.MnuStrip.Size = new System.Drawing.Size(644, 24);
             this.MnuStrip.TabIndex = 0;
             this.MnuStrip.Text = "menuStrip1";
             // 
@@ -82,7 +82,7 @@ namespace Assessment_Game
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(528, 73);
+            this.LblName.Location = new System.Drawing.Point(481, 94);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(38, 13);
             this.LblName.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace Assessment_Game
             // 
             // TxtName
             // 
-            this.TxtName.Location = new System.Drawing.Point(572, 70);
+            this.TxtName.Location = new System.Drawing.Point(527, 91);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 20);
             this.TxtName.TabIndex = 2;
@@ -101,7 +101,7 @@ namespace Assessment_Game
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(589, 143);
+            this.label1.Location = new System.Drawing.Point(481, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace Assessment_Game
             // LblScore
             // 
             this.LblScore.AutoSize = true;
-            this.LblScore.Location = new System.Drawing.Point(633, 143);
+            this.LblScore.Location = new System.Drawing.Point(524, 143);
             this.LblScore.Name = "LblScore";
             this.LblScore.Size = new System.Drawing.Size(13, 13);
             this.LblScore.TabIndex = 4;
@@ -119,7 +119,7 @@ namespace Assessment_Game
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(589, 179);
+            this.label3.Location = new System.Drawing.Point(481, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 5;
@@ -128,7 +128,7 @@ namespace Assessment_Game
             // LblLives
             // 
             this.LblLives.AutoSize = true;
-            this.LblLives.Location = new System.Drawing.Point(633, 179);
+            this.LblLives.Location = new System.Drawing.Point(524, 179);
             this.LblLives.Name = "LblLives";
             this.LblLives.Size = new System.Drawing.Size(13, 13);
             this.LblLives.TabIndex = 6;
@@ -137,9 +137,10 @@ namespace Assessment_Game
             // PnlGame
             // 
             this.PnlGame.BackColor = System.Drawing.Color.MintCream;
+            this.PnlGame.BackgroundImage = global::Assessment_Game.Properties.Resources.ice_cave;
             this.PnlGame.Location = new System.Drawing.Point(12, 45);
             this.PnlGame.Name = "PnlGame";
-            this.PnlGame.Size = new System.Drawing.Size(510, 440);
+            this.PnlGame.Size = new System.Drawing.Size(450, 419);
             this.PnlGame.TabIndex = 7;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
@@ -147,8 +148,8 @@ namespace Assessment_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(684, 511);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(644, 480);
             this.Controls.Add(this.PnlGame);
             this.Controls.Add(this.LblLives);
             this.Controls.Add(this.label3);
@@ -166,7 +167,6 @@ namespace Assessment_Game
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MnuStrip.ResumeLayout(false);
             this.MnuStrip.PerformLayout();
             this.ResumeLayout(false);

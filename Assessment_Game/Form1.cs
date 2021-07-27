@@ -28,6 +28,11 @@ namespace Assessment_Game
         public Form1()
         {
             InitializeComponent();
+
+            typeof(Panel).InvokeMember("DoubleBuffered", System.Reflection.BindingFlags.SetProperty
+            | System.Reflection.BindingFlags.Instance 
+            | System.Reflection.BindingFlags.NonPublic, null, PnlGame, new object[] { true });
+
             for (int i = 0; i < 7; i++)
             {
                 int x = 10 + (i * 75);
@@ -68,11 +73,6 @@ namespace Assessment_Game
                 TxtName.Focus();
             }
 
-        }
-
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-          
         }
 
         private void tmrDragon_Tick(object sender, EventArgs e)

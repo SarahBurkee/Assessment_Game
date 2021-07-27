@@ -83,6 +83,16 @@ namespace Assessment_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ice_cave {
+            get {
+                object obj = ResourceManager.GetObject("ice_cave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap marshmallow {
             get {
                 object obj = ResourceManager.GetObject("marshmallow", resourceCulture);
