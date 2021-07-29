@@ -143,6 +143,7 @@ namespace Assessment_Game
             this.PnlGame.Size = new System.Drawing.Size(450, 419);
             this.PnlGame.TabIndex = 7;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            this.PnlGame.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlGame_MouseDown);
             // 
             // Form1
             // 
@@ -159,6 +160,7 @@ namespace Assessment_Game
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.MnuStrip);
             this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.MainMenuStrip = this.MnuStrip;
             this.Name = "Form1";
             this.Text = "Form1";

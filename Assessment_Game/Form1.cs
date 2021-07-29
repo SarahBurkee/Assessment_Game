@@ -97,10 +97,7 @@ namespace Assessment_Game
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                fire.Add(new Fire(dragon.dragonRec, dragon.rotationAngle));
-            }
+         
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -178,6 +175,14 @@ namespace Assessment_Game
             {
                 m.drawFire(g);
                 m.moveFire(g);
+            }
+        }
+
+        private void PnlGame_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                fire.Add(new Fire(dragon.dragonRec, dragon.rotationAngle));
             }
         }
 
