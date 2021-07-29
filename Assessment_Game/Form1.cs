@@ -53,25 +53,7 @@ namespace Assessment_Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the left and right arrow keys to move the dragon. \n Try to cook as many marshmallows as you can! \n Every marshmallow that you hit scores a point. \n If a marshmallow goes to the bottom of the game area you lose a life! \n \n Enter your Name \n Click Start to begin", "Game Instructions");
-            TxtName.Focus();
-
-            playerName = TxtName.Text;
-
-
-            if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
-            {
-                //if playerName valid (only letters) 
-                MessageBox.Show("Starting");
-            }
-            else
-            {
-                //invalid playerName, clear txtName and focus on it to try again
-                MessageBox.Show("please enter a name using letters only!");
-                TxtName.Clear();
-
-                TxtName.Focus();
-            }
+           
 
         }
 
@@ -93,11 +75,6 @@ namespace Assessment_Game
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
-        }
-
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-         
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -139,19 +116,34 @@ namespace Assessment_Game
             // pass lives from LblLives Text property to lives variable
             lives = int.Parse(LblLives.Text);
 
-            tmrDragon.Enabled = true;
-            tmrMarshmallow.Enabled = true;
+            playerName = TxtName.Text;
+
+
+            if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
+            {
+                //if playerName valid (only letters) 
+                MessageBox.Show("Starting");
+                tmrDragon.Enabled = true;
+                tmrMarshmallow.Enabled = true;
+            }
+
+            else
+            {
+                //invalid playerName, clear txtName and focus on it to try again
+                MessageBox.Show("Please enter a name using letters only!");
+                TxtName.Clear();
+                tmrDragon.Enabled = false;
+                tmrMarshmallow.Enabled = false;
+
+                TxtName.Focus();
+            }
+
         }
 
         private void MnuStop_Click(object sender, EventArgs e)
         {
             tmrDragon.Enabled = false;
             tmrMarshmallow.Enabled = false;
-        }
-
-        private void LblName_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
@@ -186,11 +178,6 @@ namespace Assessment_Game
             }
         }
 
-        private void TxtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TxtName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -198,11 +185,6 @@ namespace Assessment_Game
                 e.Handled = true;
             }
 
-        }
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            
         }
     }
 }

@@ -87,7 +87,6 @@ namespace Assessment_Game
             this.LblName.Size = new System.Drawing.Size(38, 13);
             this.LblName.TabIndex = 1;
             this.LblName.Text = "Name:";
-            this.LblName.Click += new System.EventHandler(this.LblName_Click);
             // 
             // TxtName
             // 
@@ -95,7 +94,6 @@ namespace Assessment_Game
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 20);
             this.TxtName.TabIndex = 2;
-            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             this.TxtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtName_KeyPress);
             // 
             // label1
@@ -165,10 +163,8 @@ namespace Assessment_Game
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MnuStrip.ResumeLayout(false);
             this.MnuStrip.PerformLayout();
             this.ResumeLayout(false);
