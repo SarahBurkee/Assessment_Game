@@ -23,7 +23,7 @@ namespace Assessment_Game
 
         bool left, right;
         int score, lives;
-        string playerName, move;
+        string move;
 
         public Form1()
         {
@@ -55,6 +55,11 @@ namespace Assessment_Game
         {
            
 
+        }
+
+        public string _textName
+        {
+            set { label.Text = value; }
         }
 
         private void tmrDragon_Tick(object sender, EventArgs e)
@@ -116,27 +121,8 @@ namespace Assessment_Game
             // pass lives from LblLives Text property to lives variable
             lives = int.Parse(LblLives.Text);
 
-            playerName = TxtName.Text;
-
-
-            if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
-            {
-                //if playerName valid (only letters) 
-                MessageBox.Show("Starting");
-                tmrDragon.Enabled = true;
-                tmrMarshmallow.Enabled = true;
-            }
-
-            else
-            {
-                //invalid playerName, clear txtName and focus on it to try again
-                MessageBox.Show("Please enter a name using letters only!");
-                TxtName.Clear();
-                tmrDragon.Enabled = false;
-                tmrMarshmallow.Enabled = false;
-
-                TxtName.Focus();
-            }
+            tmrDragon.Enabled = true;
+            tmrMarshmallow.Enabled = true;
 
         }
 
@@ -176,15 +162,6 @@ namespace Assessment_Game
             {
                 fire.Add(new Fire(dragon.dragonRec, dragon.rotationAngle));
             }
-        }
-
-        private void TxtName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
         }
     }
 }

@@ -32,36 +32,64 @@ namespace Assessment_Game
             this.label1 = new System.Windows.Forms.Label();
             this.BtnStart = new System.Windows.Forms.Button();
             this.BtnInstructions = new System.Windows.Forms.Button();
+            this.TxtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 155);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(146, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(178, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Game Name";
+            this.label1.Text = "Marshmallow Roast";
             // 
             // BtnStart
             // 
-            this.BtnStart.Location = new System.Drawing.Point(186, 261);
+            this.BtnStart.BackColor = System.Drawing.Color.LightBlue;
+            this.BtnStart.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnStart.Location = new System.Drawing.Point(172, 290);
             this.BtnStart.Name = "BtnStart";
-            this.BtnStart.Size = new System.Drawing.Size(75, 23);
+            this.BtnStart.Size = new System.Drawing.Size(110, 26);
             this.BtnStart.TabIndex = 1;
             this.BtnStart.Text = "Start";
-            this.BtnStart.UseVisualStyleBackColor = true;
+            this.BtnStart.UseVisualStyleBackColor = false;
             this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // BtnInstructions
             // 
-            this.BtnInstructions.Location = new System.Drawing.Point(186, 309);
+            this.BtnInstructions.BackColor = System.Drawing.Color.LightBlue;
+            this.BtnInstructions.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInstructions.Location = new System.Drawing.Point(172, 335);
             this.BtnInstructions.Name = "BtnInstructions";
-            this.BtnInstructions.Size = new System.Drawing.Size(75, 23);
+            this.BtnInstructions.Size = new System.Drawing.Size(110, 26);
             this.BtnInstructions.TabIndex = 2;
             this.BtnInstructions.Text = "Instructions";
-            this.BtnInstructions.UseVisualStyleBackColor = true;
+            this.BtnInstructions.UseVisualStyleBackColor = false;
             this.BtnInstructions.Click += new System.EventHandler(this.BtnInstructions_Click);
+            // 
+            // TxtName
+            // 
+            this.TxtName.Location = new System.Drawing.Point(151, 254);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(154, 20);
+            this.TxtName.TabIndex = 3;
+            this.TxtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtName_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(192, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Enter Name:";
             // 
             // FormStartup
             // 
@@ -69,6 +97,8 @@ namespace Assessment_Game
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Assessment_Game.Properties.Resources.ice_cave;
             this.ClientSize = new System.Drawing.Size(450, 416);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TxtName);
             this.Controls.Add(this.BtnInstructions);
             this.Controls.Add(this.BtnStart);
             this.Controls.Add(this.label1);
@@ -85,5 +115,7 @@ namespace Assessment_Game
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.Button BtnInstructions;
+        private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.Label label2;
     }
 }

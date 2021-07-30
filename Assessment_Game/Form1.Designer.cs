@@ -36,12 +36,12 @@ namespace Assessment_Game
             this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.LblName = new System.Windows.Forms.Label();
-            this.TxtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LblScore = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LblLives = new System.Windows.Forms.Label();
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.label = new System.Windows.Forms.Label();
             this.MnuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,53 +82,50 @@ namespace Assessment_Game
             // LblName
             // 
             this.LblName.AutoSize = true;
+            this.LblName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblName.Location = new System.Drawing.Point(481, 94);
             this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(38, 13);
+            this.LblName.Size = new System.Drawing.Size(46, 16);
             this.LblName.TabIndex = 1;
             this.LblName.Text = "Name:";
-            // 
-            // TxtName
-            // 
-            this.TxtName.Location = new System.Drawing.Point(527, 91);
-            this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(100, 20);
-            this.TxtName.TabIndex = 2;
-            this.TxtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtName_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(481, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Score:";
             // 
             // LblScore
             // 
             this.LblScore.AutoSize = true;
+            this.LblScore.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblScore.Location = new System.Drawing.Point(524, 143);
             this.LblScore.Name = "LblScore";
-            this.LblScore.Size = new System.Drawing.Size(13, 13);
+            this.LblScore.Size = new System.Drawing.Size(15, 16);
             this.LblScore.TabIndex = 4;
             this.LblScore.Text = "0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(481, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Lives:";
             // 
             // LblLives
             // 
             this.LblLives.AutoSize = true;
+            this.LblLives.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLives.Location = new System.Drawing.Point(524, 179);
             this.LblLives.Name = "LblLives";
-            this.LblLives.Size = new System.Drawing.Size(13, 13);
+            this.LblLives.Size = new System.Drawing.Size(15, 16);
             this.LblLives.TabIndex = 6;
             this.LblLives.Text = "5";
             // 
@@ -143,18 +140,28 @@ namespace Assessment_Game
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             this.PnlGame.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlGame_MouseDown);
             // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(525, 94);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(42, 16);
+            this.label.TabIndex = 8;
+            this.label.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(644, 480);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.PnlGame);
             this.Controls.Add(this.LblLives);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LblScore);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TxtName);
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.MnuStrip);
             this.DoubleBuffered = true;
@@ -180,12 +187,12 @@ namespace Assessment_Game
         private System.Windows.Forms.ToolStripMenuItem MnuStart;
         private System.Windows.Forms.ToolStripMenuItem MnuStop;
         private System.Windows.Forms.Label LblName;
-        private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LblScore;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LblLives;
         private System.Windows.Forms.Panel PnlGame;
+        private System.Windows.Forms.Label label;
     }
 }
 
