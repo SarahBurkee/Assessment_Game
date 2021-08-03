@@ -42,6 +42,7 @@ namespace Assessment_Game
             this.LblLives = new System.Windows.Forms.Label();
             this.PnlGame = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
+            this.tmrShoot = new System.Windows.Forms.Timer(this.components);
             this.MnuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,6 +151,10 @@ namespace Assessment_Game
             this.label.TabIndex = 8;
             this.label.Text = "label1";
             // 
+            // tmrShoot
+            // 
+            this.tmrShoot.Tick += new System.EventHandler(this.tmrShoot_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +198,7 @@ namespace Assessment_Game
         private System.Windows.Forms.Label LblLives;
         private System.Windows.Forms.Panel PnlGame;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Timer tmrShoot;
     }
 }
 

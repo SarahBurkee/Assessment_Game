@@ -73,9 +73,9 @@ namespace Assessment_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dragonn2 {
+        internal static System.Drawing.Bitmap dragon2 {
             get {
-                object obj = ResourceManager.GetObject("dragonn2", resourceCulture);
+                object obj = ResourceManager.GetObject("dragon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

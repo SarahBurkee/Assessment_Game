@@ -67,8 +67,9 @@ namespace Assessment_Game
             if (right) // if right arrow key pressed
             {
                 move = "right";
-                dragon.moveDragon(move);
+                dragon.moveDragon(move);          
             }
+
             if (left) // if left arrow key pressed
             {
                 move = "left";
@@ -92,21 +93,12 @@ namespace Assessment_Game
         {
             for (int i = 0; i < 7; i++)
             {
-                marshmallow[i].MoveMarshmallow();
-                if (dragon.dragonRec.IntersectsWith(marshmallow[i].marshmallowRec))
-                {
-                    //reset planet[i] back to top of panel
-                    marshmallow[i].y = 30; // set  y value of planetRec
-                    lives -= 1;// lose a life
-                    LblLives.Text = lives.ToString();// display number of lives
-                    CheckLives();
-                }
-
                 //if a planet reaches the bottom of the Game Area reposition it at the top
                 if (marshmallow[i].y >= PnlGame.Height)
                 {
-                    score += 1;//update the score
-                    LblScore.Text = score.ToString();// display score
+                    lives -= 1;// lose a life
+                    LblLives.Text = lives.ToString();// display number of lives
+                    CheckLives();
                     marshmallow[i].y = 30;
                 }
             }
@@ -131,6 +123,29 @@ namespace Assessment_Game
             tmrDragon.Enabled = false;
             tmrMarshmallow.Enabled = false;
         }
+
+        private void tmrShoot_Tick(object sender, EventArgs e)
+        {
+            foreach (Fire m in fire)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    if (m.fireRec.IntersectsWith(marshmallow[i].marshmallowRec))
+                    {
+                        score += 1;//update the score
+                        LblScore.Text = score.ToString();// display score
+
+                        marshmallow[i].y = 30;
+                        fire.Remove(m);
+                        break;
+                    }
+                        
+                }              
+            }
+
+            PnlGame.Invalidate();
+        }
+
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
