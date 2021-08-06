@@ -9,6 +9,7 @@ using System.Drawing.Drawing2D;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace Assessment_Game
 {
@@ -21,6 +22,7 @@ namespace Assessment_Game
         //declare a list  missiles from the Missile class
         List<Fire> fire = new List<Fire>();
 
+      
         bool left, right;
         int score, lives;
         string move;
@@ -62,35 +64,50 @@ namespace Assessment_Game
             set { label.Text = value; }
         }
 
+       
+
         private void tmrDragon_Tick(object sender, EventArgs e)
         {
             if (right) // if right arrow key pressed
             {
                 move = "right";
-                dragon.moveDragon(move);          
+  
+                dragon.moveDragon(move);
             }
 
             if (left) // if left arrow key pressed
             {
                 move = "left";
-                dragon.moveDragon(move);
+                dragon.moveDragon(move);     
             }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Left) { left = true; }
-            if (e.KeyData == Keys.Right) { right = true; }
+            if (e.KeyCode == Keys.Left) 
+            { 
+                left = true;
+               
+            }
+           
+            if (e.KeyCode == Keys.Right) 
+            { 
+                right = true;
+                
+
+            }
+           
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Left) { left = false; }
-            if (e.KeyData == Keys.Right) { right = false; }
+            if (e.KeyCode == Keys.Left) { left = false; }
+            if (e.KeyCode == Keys.Right) { right = false; }
         }
 
         private void tmrMarshmallow_Tick(object sender, EventArgs e)
         {
+
             for (int i = 0; i < 7; i++)
             {
                 //if a planet reaches the bottom of the Game Area reposition it at the top
@@ -126,7 +143,7 @@ namespace Assessment_Game
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
-            foreach (Fire m in fire)
+            foreach (Fire m in fire) // for movement and updating the score and lives for marshmallows
             {
                 for (int i = 0; i < 7; i++)
                 {
@@ -136,6 +153,7 @@ namespace Assessment_Game
                         LblScore.Text = score.ToString();// display score
 
                         marshmallow[i].y = 30;
+                     
                         fire.Remove(m);
                         break;
                     }

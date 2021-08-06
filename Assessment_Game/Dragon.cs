@@ -14,9 +14,13 @@ namespace Assessment_Game
 
         public int x, y, width, height;//variables for the rectangle
         public Image dragon;//variable for the planet's image
+        public Image dragon2;//variable for the planet's image
         public int rotationAngle;
         public Matrix matrix;
         Point centre;
+
+        string changeImage;
+
 
         public Rectangle dragonRec;//variable for a rectangle to place our image in
 
@@ -30,8 +34,15 @@ namespace Assessment_Game
             height = 60;
             rotationAngle = 0;
             dragon = Properties.Resources.dragon;
+            dragon2 = Properties.Resources.dragon2;
             dragonRec = new Rectangle(x, y, width, height);
         }
+
+        public void drawDragon2(Graphics g)
+        {
+            
+        }
+
         //methods
         public void drawDragon(Graphics g)
         {
@@ -54,6 +65,8 @@ namespace Assessment_Game
 
             if (move == "right")
             {
+               
+
                 if (dragonRec.Location.X > 450) // is spaceship within 50 of right side
                 {
 
@@ -68,8 +81,10 @@ namespace Assessment_Game
 
             }
 
-            if (move == "left")
-            {
+            if (move == "left")  
+                {
+
+                
                 if (dragonRec.Location.X < 10) // is spaceship within 10 of left side
                 {
 
