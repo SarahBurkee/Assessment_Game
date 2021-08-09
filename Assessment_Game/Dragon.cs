@@ -19,7 +19,7 @@ namespace Assessment_Game
         public Matrix matrix;
         Point centre;
 
-        string changeImage;
+        string dragonmovedirection;
 
 
         public Rectangle dragonRec;//variable for a rectangle to place our image in
@@ -38,11 +38,7 @@ namespace Assessment_Game
             dragonRec = new Rectangle(x, y, width, height);
         }
 
-        public void drawDragon2(Graphics g)
-        {
-            
-        }
-
+     
         //methods
         public void drawDragon(Graphics g)
         {
@@ -56,7 +52,14 @@ namespace Assessment_Game
             g.Transform = matrix;
             //draw the spaceship
 
-            g.DrawImage(dragon, dragonRec);
+            if (dragonmovedirection == "right")
+            {
+                g.DrawImage(dragon, dragonRec);
+            }
+            else
+            {
+                g.DrawImage(dragon2, dragonRec);
+            }
         }
 
         public void moveDragon(string move)
@@ -65,7 +68,7 @@ namespace Assessment_Game
 
             if (move == "right")
             {
-               
+                dragonmovedirection = "right";
 
                 if (dragonRec.Location.X > 450) // is spaceship within 50 of right side
                 {
@@ -84,7 +87,7 @@ namespace Assessment_Game
             if (move == "left")  
                 {
 
-                
+                dragonmovedirection = "left";
                 if (dragonRec.Location.X < 10) // is spaceship within 10 of left side
                 {
 

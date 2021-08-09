@@ -48,7 +48,8 @@ namespace Assessment_Game
             {
                 tmrMarshmallow.Enabled = false;
                 tmrDragon.Enabled = false;
-                MessageBox.Show("Game Over");
+                new FormGameOver().Show();
+                this.Hide();
 
             }
         }
@@ -132,6 +133,7 @@ namespace Assessment_Game
 
             tmrDragon.Enabled = true;
             tmrMarshmallow.Enabled = true;
+            tmrShoot.Enabled = true;
 
         }
 
@@ -139,6 +141,7 @@ namespace Assessment_Game
         {
             tmrDragon.Enabled = false;
             tmrMarshmallow.Enabled = false;
+            tmrShoot.Enabled = false;
         }
 
         private void tmrShoot_Tick(object sender, EventArgs e)
@@ -147,7 +150,7 @@ namespace Assessment_Game
             {
                 for (int i = 0; i < 7; i++)
                 {
-                    if (m.fireRec.IntersectsWith(marshmallow[i].marshmallowRec))
+                    if (marshmallow[i].marshmallowRec.IntersectsWith(m.fireRec))
                     {
                         score += 1;//update the score
                         LblScore.Text = score.ToString();// display score
