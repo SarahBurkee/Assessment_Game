@@ -52,13 +52,13 @@ namespace Assessment_Game
             g.Transform = matrix;
             //draw the spaceship
 
-            if (dragonmovedirection == "right")
+            if (dragonmovedirection == "left")
             {
-                g.DrawImage(dragon, dragonRec);
+                g.DrawImage(dragon2, dragonRec);
             }
             else
             {
-                g.DrawImage(dragon2, dragonRec);
+                g.DrawImage(dragon, dragonRec);
             }
         }
 
