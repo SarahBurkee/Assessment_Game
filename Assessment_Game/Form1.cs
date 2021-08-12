@@ -35,22 +35,34 @@ namespace Assessment_Game
             | System.Reflection.BindingFlags.Instance 
             | System.Reflection.BindingFlags.NonPublic, null, PnlGame, new object[] { true });
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 int x = 10 + (i * 75);
                 marshmallow[i] = new Marshmallow(x);
             }
         }
 
-        private void CheckLives()
+        private void CheckScore()
+        {
+            if (score == 50)
+            {
+                tmrMarshmallow.Enabled = false;
+                tmrDragon.Enabled = false;
+                tmrShoot.Enabled = false;
+                new YouWin().Show();
+                this.Hide();
+            }
+        }
+
+    private void CheckLives()
         {
             if (lives == 0)
             {
                 tmrMarshmallow.Enabled = false;
                 tmrDragon.Enabled = false;
+                tmrShoot.Enabled = false;
                 new FormGameOver().Show();
                 this.Hide();
-
             }
         }
 
@@ -109,7 +121,7 @@ namespace Assessment_Game
         private void tmrMarshmallow_Tick(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 //if a planet reaches the bottom of the Game Area reposition it at the top
                 if (marshmallow[i].y >= PnlGame.Height)
@@ -148,17 +160,16 @@ namespace Assessment_Game
         {
             foreach (Fire m in fire) // for movement and updating the score and lives for marshmallows
             {
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     if (marshmallow[i].marshmallowRec.IntersectsWith(m.fireRec))
                     {
                         score += 1;//update the score
+                        CheckScore();
                         LblScore.Text = score.ToString();// display score
 
-                        marshmallow[i].y = 30;
-                     
-                        fire.Remove(m);
-                        break;
+                        marshmallow[i].y = -80;    
+                        
                     }
                         
                 }              
@@ -173,7 +184,7 @@ namespace Assessment_Game
             // get the graphics used to paint on the Form control
             g = e.Graphics;
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 // generate a random number from 5 to 20 and put it in rndmspeed
                 int rndmspeed = yspeed.Next(5, 10);
