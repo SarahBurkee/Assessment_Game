@@ -178,7 +178,32 @@ namespace Assessment_Game
             PnlGame.Invalidate();
         }
 
+        private void MnuEasy_Click(object sender, EventArgs e)
+        {
+            lives = 20;
+            LblLives.Text = lives.ToString();
+            LblDifficulty.Text = "Easy"; LblDifficulty.Refresh();
+        }
 
+        private void LblDifficulty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MnuMedium_Click(object sender, EventArgs e)
+        {
+            lives = 20;
+            LblLives.Text = lives.ToString();
+            LblDifficulty.Text = "Medium"; LblDifficulty.Refresh();
+        }
+
+        private void MnuHard_Click(object sender, EventArgs e)
+        {
+            lives = 20;
+            LblLives.Text = lives.ToString();
+            LblDifficulty.Text = "Hard"; LblDifficulty.Refresh();
+        }
+         
         private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
             // get the graphics used to paint on the Form control
