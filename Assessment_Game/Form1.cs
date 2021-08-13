@@ -16,11 +16,12 @@ namespace Assessment_Game
     public partial class Form1 : Form
     {
         Graphics g; //declare a graphics object called g so we can draw on the Form
-        Marshmallow[] marshmallow = new Marshmallow[7];
+       
         Random yspeed = new Random();
-        Dragon dragon = new Dragon(); //create an instance of the Spaceship Class called spaceship
-        //declare a list  missiles from the Missile class
+        Dragon dragon = new Dragon(); //create an instance of the Dragon Class called dragon
+        //declare a list fire from the Fire class
         List<Fire> fire = new List<Fire>();
+        List<Marshmallow> marshmallow = new List<Marshmallow>();
 
       
         bool left, right;
@@ -37,8 +38,9 @@ namespace Assessment_Game
 
             for (int i = 0; i < 6; i++)
             {
-                int x = 10 + (i * 75);
-                marshmallow[i] = new Marshmallow(x);
+                int displacement = 10 + (i * 75);
+
+                marshmallow.Add(new Marshmallow(displacement));
             }
         }
 
@@ -123,7 +125,7 @@ namespace Assessment_Game
 
             for (int i = 0; i < 6; i++)
             {
-                //if a planet reaches the bottom of the Game Area reposition it at the top
+                //if a marshmallow reaches the bottom of the Game Area reposition it at the top
                 if (marshmallow[i].y >= PnlGame.Height)
                 {
                     lives -= 1;// lose a life
@@ -158,20 +160,26 @@ namespace Assessment_Game
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
+
             foreach (Fire m in fire) // for movement and updating the score and lives for marshmallows
+           
             {
-                for (int i = 0; i < 6; i++)
+                foreach (Marshmallow p in marshmallow) // for movement and updating the score and lives for marshmallows
+        
                 {
-                    if (marshmallow[i].marshmallowRec.IntersectsWith(m.fireRec))
+                    if (p.marshmallowRec.IntersectsWith(m.fireRec))
                     {
                         score += 1;//update the score
                         CheckScore();
                         LblScore.Text = score.ToString();// display score
 
-                        marshmallow[i].y = -80;    
+                        p.y = 0;
                         
+                        fire.Remove(m);
+                        break;
+
                     }
-                        
+
                 }              
             }
 
@@ -180,7 +188,7 @@ namespace Assessment_Game
 
         private void MnuEasy_Click(object sender, EventArgs e)
         {
-            lives = 20;
+            lives = 15;
             LblLives.Text = lives.ToString();
             LblDifficulty.Text = "Easy"; LblDifficulty.Refresh();
         }
@@ -192,14 +200,14 @@ namespace Assessment_Game
 
         private void MnuMedium_Click(object sender, EventArgs e)
         {
-            lives = 20;
+            lives = 10;
             LblLives.Text = lives.ToString();
             LblDifficulty.Text = "Medium"; LblDifficulty.Refresh();
         }
 
         private void MnuHard_Click(object sender, EventArgs e)
         {
-            lives = 20;
+            lives = 5;
             LblLives.Text = lives.ToString();
             LblDifficulty.Text = "Hard"; LblDifficulty.Refresh();
         }
@@ -211,8 +219,8 @@ namespace Assessment_Game
 
             for (int i = 0; i < 6; i++)
             {
-                // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = yspeed.Next(5, 10);
+                // generate a random number from 4 to 8 and put it in rndmspeed
+                int rndmspeed = yspeed.Next(4, 8);
                 marshmallow[i].y += rndmspeed;
 
 

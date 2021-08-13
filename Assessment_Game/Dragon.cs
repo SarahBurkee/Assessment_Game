@@ -13,8 +13,8 @@ namespace Assessment_Game
         // declare fields to use in the class
 
         public int x, y, width, height;//variables for the rectangle
-        public Image dragon;//variable for the planet's image
-        public Image dragon2;//variable for the planet's image
+        public Image dragon;//variable for the dragon's image
+        public Image dragon2;//variable for the dragon's image
         public int rotationAngle;
         public Matrix matrix;
         Point centre;
@@ -42,7 +42,7 @@ namespace Assessment_Game
         //methods
         public void drawDragon(Graphics g)
         {
-            //find the centre point of spaceRec
+            //find the centre point of dragonRec
             centre = new Point(dragonRec.X + width / 2, dragonRec.Y + width / 2);
             //instantiate a Matrix object called matrix
             matrix = new Matrix();
@@ -50,7 +50,7 @@ namespace Assessment_Game
             matrix.RotateAt(rotationAngle, centre);
             //Set the current draw location to the rotated matrix point
             g.Transform = matrix;
-            //draw the spaceship
+            //draw the dragon
 
             if (dragonmovedirection == "left")
             {
@@ -70,7 +70,7 @@ namespace Assessment_Game
             {
                 dragonmovedirection = "right";
 
-                if (dragonRec.Location.X > 450) // is spaceship within 50 of right side
+                if (dragonRec.Location.X > 450) // is dragon within 50 of right side
                 {
 
                     x = 450;
@@ -88,7 +88,7 @@ namespace Assessment_Game
                 {
 
                 dragonmovedirection = "left";
-                if (dragonRec.Location.X < 10) // is spaceship within 10 of left side
+                if (dragonRec.Location.X < 10) // is dragon within 10 of left side
                 {
 
                     x = 10;

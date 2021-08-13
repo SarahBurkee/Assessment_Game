@@ -63,9 +63,9 @@ namespace Assessment_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cavebackground {
+        internal static System.Drawing.Bitmap caveee {
             get {
-                object obj = ResourceManager.GetObject("cavebackground", resourceCulture);
+                object obj = ResourceManager.GetObject("caveee", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

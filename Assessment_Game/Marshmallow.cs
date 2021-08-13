@@ -12,11 +12,11 @@ namespace Assessment_Game
     {
         // declare fields to use in the class
         public int x, y, width, height;//variables for the rectangle
-        public Image marshmallowImage;//variable for the planet's image
+        public Image marshmallowImage;//variable for the marshmallow's image
 
         public Rectangle marshmallowRec;//variable for a rectangle to place our image in
 
-        // Methods for the Planet class
+        // Methods for the Marshmallow class
         public void DrawMarshmallow(Graphics g)
         {
             marshmallowRec = new Rectangle(x, y, width, height);
@@ -29,13 +29,13 @@ namespace Assessment_Game
 
 
         //Create a constructor (initialises the values of the fields)
-        public Marshmallow(int spacing)
+        public Marshmallow(int displacement)
         {
-            x = spacing;
+            x = displacement;
             y = 10;
             width = 60;
             height = 40;
-            //planetImage contains the planet1.png image
+            //planetImage contains the marshmallow.png image
             marshmallowImage = Properties.Resources.marshmallow;
             marshmallowRec = new Rectangle(x, y, width, height);
         }
