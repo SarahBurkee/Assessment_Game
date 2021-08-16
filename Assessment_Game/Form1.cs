@@ -162,26 +162,25 @@ namespace Assessment_Game
         {
 
             foreach (Fire m in fire) // for movement and updating the score and lives for marshmallows
-           
             {
                 foreach (Marshmallow p in marshmallow) // for movement and updating the score and lives for marshmallows
-        
+
                 {
                     if (p.marshmallowRec.IntersectsWith(m.fireRec))
                     {
-                        score += 1;//update the score
+                        score += 1;// update the score
                         CheckScore();
                         LblScore.Text = score.ToString();// display score
 
                         p.y = 0;
-                        
-                        fire.Remove(m);
+
+                        m.killFire(g); // move fire so it's out of the game panel
                         break;
 
                     }
-
-                }              
+                }
             }
+
 
             PnlGame.Invalidate();
         }
@@ -191,6 +190,7 @@ namespace Assessment_Game
             lives = 15;
             LblLives.Text = lives.ToString();
             LblDifficulty.Text = "Easy"; LblDifficulty.Refresh();
+
         }
 
         private void LblDifficulty_Click(object sender, EventArgs e)
@@ -203,6 +203,7 @@ namespace Assessment_Game
             lives = 10;
             LblLives.Text = lives.ToString();
             LblDifficulty.Text = "Medium"; LblDifficulty.Refresh();
+
         }
 
         private void MnuHard_Click(object sender, EventArgs e)
@@ -210,6 +211,7 @@ namespace Assessment_Game
             lives = 5;
             LblLives.Text = lives.ToString();
             LblDifficulty.Text = "Hard"; LblDifficulty.Refresh();
+         
         }
          
         private void PnlGame_Paint(object sender, PaintEventArgs e)

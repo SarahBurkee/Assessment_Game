@@ -74,8 +74,8 @@ namespace Assessment_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Assessment_Game.Properties.Resources.ice_cave;
-            this.ClientSize = new System.Drawing.Size(450, 416);
+            this.BackgroundImage = global::Assessment_Game.Properties.Resources.cavefinalll;
+            this.ClientSize = new System.Drawing.Size(450, 446);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblGameOver);

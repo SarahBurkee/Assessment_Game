@@ -121,6 +121,9 @@
   <data name="caveee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caveee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cavefinalll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cavefinalll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dragonn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

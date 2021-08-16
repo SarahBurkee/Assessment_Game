@@ -29,7 +29,7 @@ namespace Assessment_Game
         public Dragon()
         {
             x = 10;
-            y = 360;
+            y = 380;
             width = 60;
             height = 60;
             rotationAngle = 0;
@@ -78,7 +78,7 @@ namespace Assessment_Game
                 }
                 else
                 {
-                    x += 5;
+                    x += 10;
                     dragonRec.Location = new Point(x, y);
                 }
 
@@ -91,12 +91,12 @@ namespace Assessment_Game
                 if (dragonRec.Location.X < 10) // is dragon within 10 of left side
                 {
 
-                    x = 10;
+                    x = 8;
                     dragonRec.Location = new Point(x, y);
                 }
                 else
                 {
-                    x -= 5;
+                    x -= 8;
                     dragonRec.Location = new Point(x, y);
                 }
 

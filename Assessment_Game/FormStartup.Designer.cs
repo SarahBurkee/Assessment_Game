@@ -40,11 +40,11 @@ namespace Assessment_Game
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(146, 187);
+            this.label1.Location = new System.Drawing.Point(109, 177);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 25);
+            this.label1.Size = new System.Drawing.Size(240, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Marshmallow Roast";
             // 
@@ -85,18 +85,18 @@ namespace Assessment_Game
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(192, 235);
+            this.label2.Location = new System.Drawing.Point(148, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(164, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Enter Name:";
+            this.label2.Text = "Enter Name (Letters Only):";
             // 
             // FormStartup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Assessment_Game.Properties.Resources.ice_cave;
-            this.ClientSize = new System.Drawing.Size(450, 416);
+            this.BackgroundImage = global::Assessment_Game.Properties.Resources.cavefinalll;
+            this.ClientSize = new System.Drawing.Size(450, 446);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.BtnInstructions);

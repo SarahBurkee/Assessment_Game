@@ -54,7 +54,7 @@ namespace Assessment_Game
 
         private void BtnInstructions_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(" Use the left and right arrow keys to move the dragon. \n Click the mouse to shoot fire and try to cook as many marshmallows as you can! \n Every marshmallow that you hit scores a point. \n If a marshmallow goes to the bottom of the game area you lose a life. \n If you reach 50 points you win!! \n Enter your Name and click Start to begin", "Game Instructions");
+            MessageBox.Show("Use the left and right arrow keys to move the dragon. \nClick the mouse to shoot fire and try to cook as many marshmallows as you can! \nEvery marshmallow that you hit scores a point. \nIf a marshmallow goes to the bottom of the game area you lose a life. \nOnce you reach 50 points you win!! \nEnter your name and click 'Start' to begin.", "Game Instructions");
         }
 
         public string _TxtName

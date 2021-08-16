@@ -39,7 +39,7 @@ namespace Assessment_Game
             this.lblWin.AutoSize = true;
             this.lblWin.BackColor = System.Drawing.Color.Transparent;
             this.lblWin.Font = new System.Drawing.Font("Arial Narrow", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWin.Location = new System.Drawing.Point(136, 183);
+            this.lblWin.Location = new System.Drawing.Point(144, 184);
             this.lblWin.Name = "lblWin";
             this.lblWin.Size = new System.Drawing.Size(161, 43);
             this.lblWin.TabIndex = 0;
@@ -73,8 +73,8 @@ namespace Assessment_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Assessment_Game.Properties.Resources.ice_cave;
-            this.ClientSize = new System.Drawing.Size(450, 416);
+            this.BackgroundImage = global::Assessment_Game.Properties.Resources.cavefinalll;
+            this.ClientSize = new System.Drawing.Size(450, 446);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblWin);

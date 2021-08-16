@@ -48,8 +48,8 @@ namespace Assessment_Game
             this.tmrShoot = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.LblDifficulty = new System.Windows.Forms.Label();
-            this.PnlGame = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.PnlGame = new System.Windows.Forms.Panel();
             this.MnuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,7 +173,7 @@ namespace Assessment_Game
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(541, 151);
+            this.label.Location = new System.Drawing.Point(536, 151);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(50, 18);
             this.label.TabIndex = 8;
@@ -204,17 +204,6 @@ namespace Assessment_Game
             this.LblDifficulty.Text = "Easy";
             this.LblDifficulty.Click += new System.EventHandler(this.LblDifficulty_Click);
             // 
-            // PnlGame
-            // 
-            this.PnlGame.BackColor = System.Drawing.Color.MintCream;
-            this.PnlGame.BackgroundImage = global::Assessment_Game.Properties.Resources.ice_cave;
-            this.PnlGame.Location = new System.Drawing.Point(12, 83);
-            this.PnlGame.Name = "PnlGame";
-            this.PnlGame.Size = new System.Drawing.Size(450, 419);
-            this.PnlGame.TabIndex = 7;
-            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
-            this.PnlGame.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlGame_MouseDown);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -225,12 +214,23 @@ namespace Assessment_Game
             this.label4.TabIndex = 11;
             this.label4.Text = "Marshmallow Roast";
             // 
+            // PnlGame
+            // 
+            this.PnlGame.BackColor = System.Drawing.Color.MintCream;
+            this.PnlGame.BackgroundImage = global::Assessment_Game.Properties.Resources.cavefinalll;
+            this.PnlGame.Location = new System.Drawing.Point(12, 83);
+            this.PnlGame.Name = "PnlGame";
+            this.PnlGame.Size = new System.Drawing.Size(450, 446);
+            this.PnlGame.TabIndex = 7;
+            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            this.PnlGame.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlGame_MouseDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(644, 514);
+            this.ClientSize = new System.Drawing.Size(644, 541);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.LblDifficulty);
             this.Controls.Add(this.label2);

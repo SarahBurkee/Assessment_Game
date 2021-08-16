@@ -47,7 +47,7 @@ namespace Assessment_Game
             matrixFire.RotateAt(fireRotated, centreFire);
             //Set the current draw location to the rotated matrix point i.e. where fireRec is now
             g.Transform = matrixFire;
-            //Draw the missile
+            //Draw the fire
             g.DrawImage(fire, fireRec);
 
         }
@@ -58,6 +58,15 @@ namespace Assessment_Game
             fireRec.Location = new Point(x, y);//fires new location
 
         }
+
+        public void killFire(Graphics g)
+        {
+            x = -100;
+            y = -100;
+            fireRec.Location = new Point(x, y);//fires new location
+
+        }
+
     }
 
 }
